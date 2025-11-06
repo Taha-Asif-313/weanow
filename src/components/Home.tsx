@@ -3,7 +3,7 @@ import CheckWeather from "./CheckWeather";
 
 const Home = () => {
   return (
-    <div className="relative min-h-screen flex flex-col justify-between bg-gradient-to-b from-zinc-950 via-black to-zinc-900 text-white overflow-hidden">
+    <div className="relative min-h-screen flex flex-col justify-between bg-black text-white overflow-hidden">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-[-150px] left-[-100px] w-[400px] h-[400px] bg-primary/30 blur-[120px] rounded-full animate-pulse" />
