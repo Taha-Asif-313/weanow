@@ -9,7 +9,7 @@ const CheckWeather: React.FC = () => {
   const [response, setResponse] = useState<WeatherApiResponse | null>(null);
   const [searchCity, setSearchCity] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  const [error, setError] = useState<String>("");
 
   const apiKey: string = import.meta.env.VITE_API_KEY;
 
@@ -46,11 +46,11 @@ const CheckWeather: React.FC = () => {
           });
         }
       }, 400);
-    } catch (error: any) {
-      console.error("Error fetching weather:", error.message);
+    } catch (err: any) {
+      console.error("Error fetching weather:", err.message);
       const errorMsg = "Failed to fetch weather data";
       setError(errorMsg);
-      toast.error(errorMsg);
+      toast.error(`${error}`);
     } finally {
       setLoading(false);
     }

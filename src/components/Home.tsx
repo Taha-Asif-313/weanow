@@ -1,4 +1,4 @@
-import { Heart, SunMedium } from "lucide-react";
+import { Heart } from "lucide-react";
 import CheckWeather from "./CheckWeather";
 
 const Home = () => {
